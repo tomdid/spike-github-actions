@@ -6,6 +6,9 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
       - name: Test Coverage
         uses: mattallty/jest-github-action@v1
         env:
