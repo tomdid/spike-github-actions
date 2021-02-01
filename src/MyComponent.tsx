@@ -1,7 +1,13 @@
 import React, { FC } from 'react';
 
-const MyComponent: FC<{ type: 'primary' | 'secondary'}> = ({ type }) => {
-  const label = type ==='primary' ? 'Primary' : 'Other...';
+const labelByType = {
+  primary: 'Primary label',
+  secondary: 'Secondary label',
+  other: 'Other label',
+};
+
+const MyComponent: FC<{ type: 'primary' | 'secondary' | 'other'}> = ({ type }) => {
+  const label = labelByType[type];
 
   return <div>
     My label type is ${label}
