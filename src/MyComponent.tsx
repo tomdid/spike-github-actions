@@ -9,6 +9,10 @@ const labelByType = {
 const MyComponent: FC<{ type: 'primary' | 'secondary' | 'other'}> = ({ type }) => {
   const label = labelByType[type];
 
+  if (label === 'other') {
+    return <div>Other...</div>
+  }
+
   return <div>
     My label type is ${label}
   </div>
