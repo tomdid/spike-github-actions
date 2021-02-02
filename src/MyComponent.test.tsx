@@ -8,11 +8,6 @@ test('Should render primary label', () => {
   expect(labelElement).toBeInTheDocument();
 });
 
-test('Should throw error by purpose', () => {
-  const { getByText } = render(<MyComponent type="other" />);
-  const labelElement = getByText(/ERROR/i);
-  expect(labelElement).toBeInTheDocument();
-});
 
 test('Should render secondary label', () => {
   const { getByText } = render(<MyComponent type="secondary" />);
@@ -20,8 +15,3 @@ test('Should render secondary label', () => {
   expect(labelElement).toBeInTheDocument();
 });
 
-test('Should throw error by purpose for second time', () => {
-  const { getByText } = render(<MyComponent type="other" />);
-  const labelElement = getByText(/ERROR/i);
-  expect(labelElement).toBeInTheDocument();
-});
