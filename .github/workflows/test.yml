@@ -33,9 +33,9 @@ jobs:
           test-command: "yarn test"
           coverage-comment: false
 
-      - name: Test Coverage
-        uses: anuraag016/Jest-Coverage-Diff@master
-        with:
-          fullCoverageDiff: true
-          runCommand: "yarn test:coverage"
-          delta: 0.5
+      # - name: Test Coverage
+      #   uses: anuraag016/Jest-Coverage-Diff@master
+      #   with:
+      #     fullCoverageDiff: true
+      #     runCommand: "yarn test:coverage"
+      #     delta: 0.5
