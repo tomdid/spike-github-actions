@@ -8,15 +8,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install modules
-        run: yarn
-
       - name: Cache multiple paths
         uses: actions/cache@v2
         with:
           path: |
             **/node_modules
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install modules
+        run: yarn
 
       - name: Tests
         uses: mattallty/jest-github-action@v1
