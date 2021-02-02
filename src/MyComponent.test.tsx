@@ -15,3 +15,8 @@ test('Should render secondary label', () => {
   expect(labelElement).toBeInTheDocument();
 });
 
+test('Should render `Other...` label', () => {
+  const { getByText } = render(<MyComponent type="other" />);
+  const labelElement = getByText("Other...");
+  expect(labelElement).toBeInTheDocument();
+});
