@@ -20,3 +20,9 @@ test('Should render `Other...` label', () => {
   const labelElement = getByText("Other...");
   expect(labelElement).toBeInTheDocument();
 });
+
+test('Repeat test for cache action check', () => {
+  const { getByText } = render(<MyComponent type="other" />);
+  const labelElement = getByText("Other...");
+  expect(labelElement).toBeInTheDocument();
+});
