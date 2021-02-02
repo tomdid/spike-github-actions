@@ -12,11 +12,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            **/node_modules
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+            ~/yarn-cache
+          key: ${{ runner.os }}-modules-${{ hashFiles('./yarn.lock') }}
 
       - name: Install modules
-        run: yarn
+        run: yarn --cache-folder ~/yarn-cache
 
       - name: Tests
         uses: mattallty/jest-github-action@v1
