@@ -9,7 +9,7 @@ const labelByType = {
 const MyComponent: FC<{ type: 'primary' | 'secondary' | 'other'}> = ({ type }) => {
   const label = labelByType[type];
 
-  if (label === 'other') {
+  if (type === 'other') {
     return <div>Other...</div>
   }
 
