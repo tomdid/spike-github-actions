@@ -27,8 +27,3 @@ test('Repeat test for cache action check', () => {
   expect(labelElement).toBeInTheDocument();
 });
 
-test('Repeat2 test for cache action check', () => {
-  const { getByText } = render(<MyComponent type="other" />);
-  const labelElement = getByText("Other...");
-  expect(labelElement).toBeInTheDocument();
-});
