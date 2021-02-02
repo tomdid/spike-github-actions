@@ -22,7 +22,7 @@ jobs:
 
 
       - name: Install modules
-        run: yarn --cache-folder ~/yarn-cache
+        run: yarn
 
       - name: Tests
         uses: mattallty/jest-github-action@v1
