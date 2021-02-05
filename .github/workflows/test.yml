@@ -32,7 +32,11 @@ jobs:
           # this is just an example, this could be any command that will trigger jest
           test-command: "yarn test"
           coverage-comment: false
-
+       
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       # - name: Test Coverage
       #   uses: anuraag016/Jest-Coverage-Diff@master
       #   with:
